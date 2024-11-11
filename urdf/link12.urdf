@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
-     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="link12">
@@ -47,34 +47,19 @@
       <material
         name="">
         <color
-          rgba="0.2 0.4 0.69804 1" />
+          rgba="1 1 1 1" />
       </material>
     </visual>
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="1.57 0 0" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://link12/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
-
-  <joint
-    name="joint1"
-    type="continuous">
-    <origin
-      xyz="0 0.054982 0"
-      rpy="0 0 0" />
-    <parent
-      link="base_link" />
-    <child
-      link="link1" />
-    <axis
-      xyz="0 1 0" />
-  </joint>
-
 
   <link
     name="link1">
@@ -103,7 +88,7 @@
       <material
         name="">
         <color
-          rgba="0.6902 0.61176 0.52941 1" />
+          rgba="1 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -118,17 +103,17 @@
   </link>
 
   <joint
-    name="joint2"
+    name="joint1"
     type="continuous">
     <origin
-      xyz="0 0.06 0.1"
+      xyz="0 0.054982 0"
       rpy="0 0 0" />
     <parent
-      link="link1" />
+      link="base_link" />
     <child
-      link="link2" />
+      link="link1" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 1 0" />
   </joint>
 
   <link
@@ -158,7 +143,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="1 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -172,6 +157,18 @@
     </collision>
   </link>
 
-
-
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0 0.06 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  
 </robot>
